@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AdressBookUser {
+public class AdressBookUser  {
 
 	ArrayList<Contactsuser> contactofuser = new ArrayList<>();
 	Scanner sc = new Scanner(System.in);

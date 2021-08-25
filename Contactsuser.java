@@ -2,7 +2,7 @@
 public class Contactsuser {
 	static String userFirstName;
 	String userLastName;
-	String address;
+	 String address;
 	String city;
 	String state;
 	String mailId;
