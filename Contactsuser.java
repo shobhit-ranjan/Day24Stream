@@ -83,7 +83,7 @@ public class Contactsuser {
 
 	public String getEmail() {
 		return mailId;
-	}
+}
 
 }
 

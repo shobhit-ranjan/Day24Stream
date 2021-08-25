@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class AdressBookUser {
 
-	 ArrayList<Contactsuser> contactofuser = new ArrayList<>();
-	 Scanner sc = new Scanner(System.in);
+	ArrayList<Contactsuser> contactofuser = new ArrayList<>();
+	Scanner sc = new Scanner(System.in);
 	Contactsuser userData;
 	int noOfEntery;
 	String userFirstName, userLastName, address, city, state, mailId;
@@ -14,6 +14,14 @@ public class AdressBookUser {
 	void addContact() {
 		noOfEntery = sc.nextInt();
 		for (int i = 0; i < noOfEntery; i++) {
+			if (contactofuser != null) {
+                //STREAM
+				// looking if there is some of same name
+				if (contactofuser.stream().anyMatch(any -> any.equals(userFirstName))) {
+					System.out.println("there is person of same name");
+					return;
+				}
+			}
 			System.out.println("Your First Name ");
 			userFirstName = sc.next();
 			System.out.println("Your Last Name");
