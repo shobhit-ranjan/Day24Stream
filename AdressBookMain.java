@@ -11,6 +11,7 @@ public class AdressBookMain {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("How Many entry you want to make this time");
 		Entery.addContact();
+		Entery.editContact();
 		sc.close();
 	}
 
