@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class AdressBookUser {
 
-	ArrayList<Contactsuser> contactofuser = new ArrayList<>();
-	Scanner sc = new Scanner(System.in);
+	 ArrayList<Contactsuser> contactofuser = new ArrayList<>();
+	 Scanner sc = new Scanner(System.in);
 	Contactsuser userData;
 	int noOfEntery;
 	String userFirstName, userLastName, address, city, state, mailId;
