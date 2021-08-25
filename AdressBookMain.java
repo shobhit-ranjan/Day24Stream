@@ -12,6 +12,7 @@ public class AdressBookMain {
 		System.out.println("How Many entry you want to make this time");
 		Entery.addContact();
 		Entery.editContact();
+		Entery.DeleteUserEntery();
 		sc.close();
 	}
 

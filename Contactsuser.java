@@ -1,6 +1,6 @@
 
 public class Contactsuser {
-	String userFirstName;
+	static String userFirstName;
 	String userLastName;
 	String address;
 	String city;
