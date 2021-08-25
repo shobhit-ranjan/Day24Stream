@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AdressBookMain {
+ public class AdressBookMain {
 
 	public static void main(String[] args) {
 		

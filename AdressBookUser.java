@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AdressBookUser  {
+public class AdressBookUser {
 
 	ArrayList<Contactsuser> contactofuser = new ArrayList<>();
 	Scanner sc = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class AdressBookUser  {
 		noOfEntery = sc.nextInt();
 		for (int i = 0; i < noOfEntery; i++) {
 			if (contactofuser != null) {
-                //STREAM
+				// STREAM
 				// looking if there is some of same name
 				if (contactofuser.stream().anyMatch(any -> any.equals(userFirstName))) {
 					System.out.println("there is person of same name");
@@ -77,9 +77,9 @@ public class AdressBookUser  {
 							phoneNumber, mailId));
 					counter = 1;
 				} else {
-					System.out.println();
+
 					System.out.println(
-								"Enter the Number which you want to edit :1 firstname 2 lastname 3 Address 4.City 5.State 6.EmailUD 7 PinCode 8.PhoneNumber  ");
+							"Enter the Number which you want to edit :1 firstname 2 lastname 3 Address 4.City 5.State 6.EmailUD 7 PinCode 8.PhoneNumber ");
 					int choice = sc.nextInt();
 					switch (choice) {
 					case 1:
@@ -170,4 +170,27 @@ public class AdressBookUser  {
 			System.out.println("invalid input");
 		}
 	}
+
+	public void searchFromStateOrCity() {
+		if (contactofuser.isEmpty()) {
+			System.out.println("There in entry of any user");
+			return;
+		}
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 1 if you want to search by city name else press any number for searching by state");
+		int temp = sc.nextInt();
+		if (temp == 1) {
+			System.out.println("Enter City Name: ");
+			String city = sc.next();
+
+			contactofuser.stream().filter(any -> any.equals(city)).forEach(any -> System.out.print(any.getFirstName()));
+		} else {
+			System.out.println("Enter State Name: ");
+			String State = sc.next();
+			contactofuser.stream().filter(any -> any.equals(State))
+					.forEach(any -> System.out.print(any.getFirstName()));
+		}
+		sc.close();
+	}
+
 }
